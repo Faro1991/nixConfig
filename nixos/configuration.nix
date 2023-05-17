@@ -101,21 +101,29 @@
     description = "Fnord";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
+      # Editors & dev stuff
       vim
-      vivaldi
       vscode
-      keepassxc
+      git
+      wget
+
+      # Browsers
+      vivaldi
+      firefox
+
+      # Cloud apps
       discord
       notion-app-enhanced
       nextcloud-client
-      evolution
       steam
-      spaceFM
       tdesktop
-      wget
+ 
+      # Misc
+      keepassxc
+      evolution
+      spaceFM
       pavucontrol
-      git
+      pasystray
       #  thunderbird
     ];
   };
