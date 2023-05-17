@@ -43,13 +43,29 @@
 
   # TODO: Set your username
   home = {
-    username = "your-username";
-    homeDirectory = "/home/your-username";
+    username = "fnord";
+    homeDirectory = "/home/fnord";
   };
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   # home.packages = with pkgs; [ steam ];
+
+  programs.zsh = {
+    enable = true;
+    shellAliases = {
+      conf = "vim /home/fnord/Flakes/nixos/configuration.nix";
+      redo = "sudo nixos-rebuild switch --flake '/home/fnord/Flakes/#pharasma' && xfdesktop --reload";
+    };
+    history = {
+      size = 10000;
+    };
+    oh-my-zsh = {
+      enable = true;
+      theme = "clean";
+      plugins = ["git" "python" "man" "dotnet" "encode64"];
+    };
+  };
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

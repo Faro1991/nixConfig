@@ -99,6 +99,7 @@
   users.users.fnord = {
     isNormalUser = true;
     description = "Fnord";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       # Editors & dev stuff
@@ -106,6 +107,8 @@
       vscode
       git
       wget
+      curl
+      zsh
 
       # Browsers
       vivaldi
@@ -124,6 +127,7 @@
       spaceFM
       pavucontrol
       pasystray
+      home-manager
       #  thunderbird
     ];
   };
