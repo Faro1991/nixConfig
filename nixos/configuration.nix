@@ -167,7 +167,7 @@
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
-  }
+  };
 
   # List services that you want to enable:
 
