@@ -55,6 +55,7 @@
     enable = true;
     shellAliases = {
       conf = "vim /home/fnord/Flakes/nixos/configuration.nix";
+      home = "vim /home/fnord/Flakes/home-manager/home.nix";
       redo = "sudo nixos-rebuild switch --flake '/home/fnord/Flakes/#pharasma' && xfdesktop --reload";
     };
     history = {
