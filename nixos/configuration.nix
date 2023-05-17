@@ -139,6 +139,11 @@
       proprietaryCodecs = true;
       enableWideVine = true;
     };
+    allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "steam"
+      "steam-original"
+      "steam-runtime"
+    ]
   };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -156,6 +161,13 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  # Configure Steam
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  }
 
   # List services that you want to enable:
 
