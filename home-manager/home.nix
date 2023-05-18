@@ -76,6 +76,30 @@
     userEmail = "19fnord@gmail.com";
   };
 
+  stylix.image = ../wallpapers/steampunkEye.jpg;
+  stylix.polarity = "dark";
+  stylix.fonts = {
+    serif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Serif";
+    };
+
+    sansSerif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Sans";
+    };
+
+    monospace = {
+      package = pkgs.nerdfonts;
+      name = "Fira Code";
+    };
+
+    emoji = {
+      package = pkgs.noto-fonts-emoji;
+      name = "Noto Color Emoji";
+    };
+  };
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
