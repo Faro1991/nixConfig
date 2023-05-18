@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  hardware.enableRedistributableFirmware = true;
+
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
@@ -132,7 +134,7 @@
     ];
   };
 
-  # Allow unfree packages
+  # Allow unfree packages, allow HTML5 DRM content
   nixpkgs.config = {
     allowUnfree = true;
     vivaldi = {
