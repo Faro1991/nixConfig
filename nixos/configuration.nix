@@ -124,6 +124,7 @@
       tdesktop
  
       # Misc
+      neofetch
       keepassxc
       evolution
       spaceFM

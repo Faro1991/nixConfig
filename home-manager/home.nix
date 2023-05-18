@@ -64,13 +64,17 @@
     oh-my-zsh = {
       enable = true;
       theme = "clean";
-      plugins = ["git" "python" "man" "dotnet" "encode64"];
+      plugins = ["git" "python" "man" "dotnet" "encode64" "history-substring-search" "colored-man-pages" "zsh-autosuggestions" "zsh-syntax-highlighting"];
     };
   };
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    userName = "Fnord";
+    userEmail = "19fnord@gmail.com";
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
