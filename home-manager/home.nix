@@ -97,7 +97,7 @@
     ];
   };
 
-  stylix.image = ../wallpapers/steampunkEye.jpg;
+  stylix.image = "./wallpaper.png";
   stylix.polarity = "dark";
   stylix.fonts = {
     serif = {
