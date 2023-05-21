@@ -167,6 +167,31 @@
     dedicatedServer.openFirewall = true;
   };
 
+  stylix.image = ./wallpapers/steampunkEye.jpg;
+  stylix.polarity = "dark";
+  stylix.fonts = {
+    serif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Serif";
+    };
+
+    sansSerif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Sans";
+    };
+
+    monospace = {
+      package = pkgs.nerdfonts;
+      name = "Fira Code";
+    };
+
+    emoji = {
+      package = pkgs.noto-fonts-emoji;
+      name = "Noto Color Emoji";
+    };
+  };
+
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
