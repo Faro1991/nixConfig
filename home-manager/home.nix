@@ -76,6 +76,27 @@
     userEmail = "19fnord@gmail.com";
   };
 
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      dracula-theme.theme-dracula
+      yzhang.markdown-all-in-one
+      timonwong.shellcheck
+      ms-vscode.Powershell
+      ms-python.python
+      ms-dotnettools.csharp
+      maximedenes.vscoq
+      ionide.ionide-fsharp
+      github.copilot
+      github.codespaces
+      github.vscode-pull-request-github
+      eamodio.gitlens
+      dbaeumer.vscode-eslint
+      davidanson.vscode-markdownlint
+      
+    ];
+  };
+
   stylix.image = ../wallpapers/steampunkEye.jpg;
   stylix.polarity = "dark";
   stylix.fonts = {
