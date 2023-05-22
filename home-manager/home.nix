@@ -8,7 +8,7 @@
     # outputs.homeManagerModules.example
 
     # Or modules exported from other flakes (such as nix-colors):
-    inputs.nix-colors.homeManagerModules.default
+    # inputs.nix-colors.homeManagerModules.default
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
@@ -16,11 +16,11 @@
 
   nixpkgs = {
     # You can add overlays here
-    overlays = [
+    # overlays = [
       # Add overlays your own flake exports (from overlays and pkgs dir):
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.unstable-packages
+      # outputs.overlays.additions
+      # outputs.overlays.modifications
+      # outputs.overlays.unstable-packages
 
       # You can also add overlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default
@@ -31,7 +31,7 @@
       #     patches = [ ./change-hello-to-hi.patch ];
       #   });
       # })
-    ];
+    # ];
     # Configure your nixpkgs instance
     config = {
       # Disable if you don't want unfree packages
@@ -56,7 +56,7 @@
     shellAliases = {
       conf = "vim /home/fnord/Flakes/nixos/configuration.nix";
       redo = "sudo nixos-rebuild switch --flake '/home/fnord/Flakes/#pharasma'";
-      home = "vim /home/fnord/Flakes/home-manager/home.nix";
+      home = "vim /home/fnord/.config/nixpkgs/home.nix";
     };
     history = {
       size = 10000;
@@ -87,7 +87,7 @@
       dracula-theme.theme-dracula
       yzhang.markdown-all-in-one
       timonwong.shellcheck
-      ms-vscode.Powershell
+      ms-vscode.PowerShell
       ms-python.python
       ms-dotnettools.csharp
       maximedenes.vscoq
@@ -101,6 +101,32 @@
       
     ];
   };
+
+  stylix.autoEnable = true;
+  stylix.image = ./wallpapers/steampunkEye.jpg;
+  stylix.polarity = "dark";
+  stylix.fonts = {
+    serif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Serif";
+    };
+
+    sansSerif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Sans";
+    };
+
+    monospace = {
+      package = pkgs.nerdfonts;
+      name = "Fira Code";
+    };
+
+    emoji = {
+      package = pkgs.noto-fonts-emoji;
+      name = "Noto Color Emoji";
+    };
+  };
+
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
