@@ -74,6 +74,11 @@
     enable = true;
     userName = "Fnord";
     userEmail = "19fnord@gmail.com";
+    extraConfig = {
+      credential.helper = "${
+        pkgs.git.override { withLibsecret = true; }
+      }/bin/git-credential-libsecret";
+    };
   };
 
   programs.vscode = {
