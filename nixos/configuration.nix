@@ -169,6 +169,7 @@
     dedicatedServer.openFirewall = true;
   };
 
+  stylix.autoEnable = true;
   stylix.image = ./wallpapers/steampunkEye.jpg;
   stylix.polarity = "dark";
   stylix.fonts = {
