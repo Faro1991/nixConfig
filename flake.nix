@@ -66,6 +66,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             # > Our main nixos configuration file <
+            home-manager.nixosModules.default
             stylix.nixosModules.stylix
             ./nixos/configuration.nix
           ];
