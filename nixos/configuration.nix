@@ -54,8 +54,8 @@
   services.xserver.enable = true;
 
   # Enable the XFCE Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.desktopManager.xfce.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -169,7 +169,7 @@
     dedicatedServer.openFirewall = true;
   };
 
-  stylix.autoEnable = true;
+    stylix.autoEnable = true;
   stylix.image = ./wallpapers/steampunkEye.jpg;
   stylix.polarity = "dark";
   stylix.fonts = {
