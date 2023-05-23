@@ -117,6 +117,7 @@
       # Browsers
       vivaldi
       firefox
+      plasma-browser-integration
 
       # Cloud apps
       discord
@@ -133,6 +134,7 @@
       pavucontrol
       pasystray
       home-manager
+      plasma-integration
       #  thunderbird
     ];
   };
