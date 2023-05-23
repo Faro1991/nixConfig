@@ -53,7 +53,7 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the XFCE Desktop Environment.
+  # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
@@ -135,6 +135,7 @@
       pasystray
       home-manager
       plasma-integration
+      flameshot
       #  thunderbird
     ];
   };
