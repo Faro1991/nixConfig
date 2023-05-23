@@ -113,6 +113,8 @@
       wget
       curl
       zsh
+      zsh-autosuggestions
+      zsh-syntax-highlighting
 
       # Browsers
       vivaldi
