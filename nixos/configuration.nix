@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
     ];
 
+  # Firmware and Bluetooth support.
   hardware.enableRedistributableFirmware = true;
   hardware.bluetooth.enable = true;
 
@@ -93,6 +94,9 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+
+  # Enable bluetooth
+  services.blueman.enable = true;
 
   # Enable Flakes
   nix.settings.experimental-features = [
