@@ -11,6 +11,7 @@
     ];
 
   hardware.enableRedistributableFirmware = true;
+  hardware.bluetooth.enable = true;
 
   # Bootloader.
   boot.loader.grub.enable = true;
